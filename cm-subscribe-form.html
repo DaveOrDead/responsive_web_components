@@ -3,30 +3,134 @@
 
 
 <template id="t">
-  <style>
-    ::content > * {
-      color: red;
-    }
+    <style>
+        :host {
+            font-family: sans-serif;
+        }
+        :host([ layout = "large" ]) .form {
+           flex-direction: column;
+        }
 
-    h3 {
-        background-color: red;
-    }
-  </style>
-  <h3>Subscribe</h3> 
+        :host([ layout = "medium" ]) {
+            color: orange;
+        }
 
-    <p>Join our mailing list</p>
-    
-    <form>
+        :host([ layout = "small" ]) {
+            color: blue;
+        }
+
+        section {
+            background-color: #fafafa;
+            border-radius: 3px;
+            border: 1px solid #f1f1f1;
+            padding: 20px;
+
+        }
+
+        ::content > * {
+            color: red;
+        }
+
+        .form {
+            display: flex;
+        }
+
+        .form__item {
+            display: flex;
+            flex: 1 0 0;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+
+
+        /* --- Title--- */
+
+        h1 {
+            clear: both;
+            font-size: 22px;
+            margin: 0 0 30px;
+            padding: 0;
+            text-align: center;
+        }
+
+
+        /* --- Labels--- */
+
+        label {
+            color: #888;
+            font-size: 16px;
+            margin: 0;
+            padding: 0 10px 0 0;  
+        }
+
+
+        /* --- Input types --- */
+
+        input {
+            border-radius: 2px;
+            background-color: #FFF;
+            flex: 1 0 0;
+            padding: 13px 15px;
+            border: 1px solid #E3e3e3;
+            color: #444;
+            font-size: 16px;
+            box-sizing: border-box;
+            height: 50px;
+        }
+
+        /* --- Focus states--- */
+
+        input:focus {
+            border-color: #AAA;
+            outline: none;
+        }
+
+        button {
+            background-color: #19A9E5;
+            border: none;
+            border-radius: 3px;
+            color: #FFF;
+            clear: both;
+            font-size: 16px;
+            padding-top: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
+            padding: 1em 0;
+            text-align: center;
+            -webkit-appearance: none;
+            width: 100%;
+        }
+
+    </style>
+
+    <section>
+        <h1>Subscribe</h1> 
+            <form>
+        <div class="form"> 
         
-        <label for="name">Name:</label>
-        <input id="name" name="name" type="text">
 
-        <label for="name">Email:</label>
-        <input id="name" name="name" type="text">
+            
+                <div class="form__item">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                
+                <div class="form__item">
+                    <label for="name">Email:</label>
+                    <input id="name" name="name" type="text">
+                </div>
 
-        <button type="submit">Subscribe</button>
-    </form>
-  <content></content>
+                    </div>
+
+                <button type="submit">Subscribe</button>
+
+
+
+
+            </form>
+      <content></content>
+
 </template>
 
 <script>
