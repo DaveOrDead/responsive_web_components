@@ -1,0 +1,138 @@
+<template id="t">
+    <style>
+        :host {
+            font-family: sans-serif;
+        }
+
+        section {
+            background-color: #fafafa;
+            border-radius: 3px;
+            border: 1px solid #f1f1f1;
+            padding: 20px;
+        }
+
+        .form {
+            display: flex;
+
+        }
+
+        .form__item {   
+            box-sizing: border-box;
+            display: flex;
+            float: left;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+
+
+        /* --- Title--- */
+
+        h1 {
+            clear: both;
+            font-size: 22px;
+            margin: 0 0 30px;
+            padding: 0;
+            text-align: center;
+        }
+
+
+        /* --- Labels--- */
+
+        label {
+            color: #888;
+            display: table-cell;
+            font-size: 16px;
+            margin: 0;
+            padding: 0 10px 0 0;
+            width: auto;
+        }
+
+
+        /* --- Input types --- */
+
+        input {
+            border-radius: 2px;
+            background-color: #fff;
+            border: 1px solid #e3e3e3;
+            box-sizing: border-box;
+            color: #444;
+            display: table-cell;
+            font-size: 16px;
+            height: 50px;
+            padding: 13px 15px;
+            width: 100%;
+        }
+
+        /* --- Focus states--- */
+
+        input:focus {
+            border-color: #aaa;
+            outline: none;
+        }
+
+        button {
+            background-color: #19a9e5;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            clear: both;
+            font-size: 16px;
+            margin-bottom: 0;
+            padding: 1em 0;
+            text-align: center;
+            -webkit-appearance: none;
+            width: 100%;
+        }
+
+    </style>
+
+    <section>
+        <h1>Subscribe Flex</h1> 
+            <form>
+                
+                <div class="form"> 
+                    
+                <div class="form__item">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                
+                <div class="form__item">
+                    <label for="name">Email:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+
+            </div>
+
+            <button type="submit">Subscribe</button>
+
+        </form>
+      
+        <content></content>
+    
+    </section>
+
+</template>
+
+<script>
+  (function() {
+    var importDoc = document.currentScript.ownerDocument; // importee
+
+    // Define and register <cm-subscribe-form-flex>
+    // that uses Shadow DOM and a template.
+    var proto = Object.create(HTMLElement.prototype);
+
+    proto.createdCallback = function() {
+      // get template in import
+      var template = importDoc.querySelector('#t');
+
+      // import template into
+      var clone = document.importNode(template.content, true);
+
+      var root = this.createShadowRoot();
+      root.appendChild(clone);
+    };
+
+    document.registerElement('cm-subscribe-form-flex', {prototype: proto});
+  })();
+</script>

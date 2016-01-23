@@ -15,6 +15,7 @@ cm-subscribe-form.html"> -->
         <link rel="import" href="components/cm-subscribe-form.html">
         <link rel="import" href="components/cm-subscribe-form--media-queries.html">
         <link rel="import" href="components/cm-subscribe-form--element-queries.html">
+        <link rel="import" href="components/cm-subscribe-form--flex.html">
     </head>
     <body>
         
@@ -31,11 +32,34 @@ cm-subscribe-form.html"> -->
 
 <br><br>
 
-    <form>
-        <label>Pie man:</label>
-        <input type="text">
-        <button>Eat all of them</button>
-    </form>
+    <cm-subscribe-form-flex></cm-subscribe-form-flex>
+
+<br><br>
+
+     <section>
+        <h1>Subscribe Non-Web Component</h1> 
+            <form>
+                
+                <div class="form"> 
+                    
+                <div class="form__item">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                
+                <div class="form__item">
+                    <label for="name">Email:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+
+            </div>
+
+            <button type="submit">Subscribe</button>
+
+        </form>
+      
+        <content></content>
+    </section>
     
     </body>
 </html>
