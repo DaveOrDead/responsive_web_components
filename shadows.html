@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- <link rel="import" href="http://wsh.webfactional.com/web_components/
+cm-subscribe-form.html"> -->
+
+        <link rel="import" href="components/cm-subscribe-form.html">
+        <link rel="import" href="components/cm-subscribe-form--media-queries.html">
+        <link rel="import" href="components/cm-subscribe-form--element-queries.html">
+        <link rel="import" href="components/cm-subscribe-form--flex.html">
+    </head>
+    <body>
+        
+        <h1>Dave's Test Page</h1>
+
+        <cm-subscribe-form layout="large"></cm-subscribe-form>
+
+<br><br>
+
+        <cm-subscribe-form-media></cm-subscribe-form-media>
+
+<br><br>
+        <cm-subscribe-form-element></cm-subscribe-form-element>
+
+<br><br>
+
+    <cm-subscribe-form-flex></cm-subscribe-form-flex>
+
+<br><br>
+
+     <section>
+        <h1>Subscribe Non-Web Component</h1> 
+            <form>
+                
+                <div class="form"> 
+                    
+                <div class="form__item">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                
+                <div class="form__item">
+                    <label for="name">Email:</label>
+                    <input id="name" name="name" type="text">
+                </div>
+
+            </div>
+
+            <button type="submit">Subscribe</button>
+
+        </form>
+      
+        <content></content>
+    </section>
+    
+    </body>
+</html>
