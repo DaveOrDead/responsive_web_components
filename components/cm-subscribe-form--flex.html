@@ -13,16 +13,20 @@
 
         .form {
             display: flex;
-
+            flex-wrap: wrap;
         }
 
-        .form__item {   
+        .form__item {
+            align-items: center;   
             box-sizing: border-box;
-            display: flex;
-            float: left;
             margin-bottom: 20px;
-            padding-right: 10px;
+            flex: 1 0 320px;
+            max-width: 100%;
+            padding: 0 10px;
+            display: flex;
+            flex-wrap: wrap;
         }
+
 
 
         /* --- Title--- */
@@ -40,11 +44,12 @@
 
         label {
             color: #888;
-            display: table-cell;
+            display: block;
             font-size: 16px;
             margin: 0;
             padding: 0 10px 0 0;
-            width: auto;
+            flex: 1 0 90px;
+            max-width: 70px;
         }
 
 
@@ -56,11 +61,11 @@
             border: 1px solid #e3e3e3;
             box-sizing: border-box;
             color: #444;
-            display: table-cell;
             font-size: 16px;
             height: 50px;
             padding: 13px 15px;
             width: 100%;
+            flex: 1 0 230px;
         }
 
         /* --- Focus states--- */
@@ -92,17 +97,16 @@
                 
                 <div class="form"> 
                     
-                <div class="form__item">
-                    <label for="name">Name:</label>
-                    <input id="name" name="name" type="text">
-                </div>
-                
-                <div class="form__item">
-                    <label for="name">Email:</label>
-                    <input id="name" name="name" type="text">
-                </div>
+	                <div class="form__item">
+	                    <label for="name">Name:</label>
+	                    <input id="name" name="name" type="text">
+	                </div>
+	                <div class="form__item">
+	                    <label for="name">Email:</label>
+	                    <input id="name" name="name" type="text">
+	                </div>
 
-            </div>
+            	</div>
 
             <button type="submit">Subscribe</button>
 
